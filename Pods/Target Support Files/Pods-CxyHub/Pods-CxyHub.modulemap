@@ -1,0 +1,6 @@
+framework module Pods_CxyHub {
+  umbrella header "Pods-CxyHub-umbrella.h"
+
+  export *
+  module * { export * }
+}
