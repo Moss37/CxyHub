@@ -13,6 +13,8 @@ class HotViewController: BaseTableViewController {
     var client:HotClient = HotClient()
     
     var items:[HotItem] = []
+    
+    var cell:HotCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class HotViewController: BaseTableViewController {
                 weakSelf?.tableView.reloadData()
             }
         }
+        cell = HotCell(style: .default, reuseIdentifier: "\(HotCell.self)")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +41,8 @@ class HotViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        let height = cell?.height(for: items[indexPath.row]) ?? 0
+        return height
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

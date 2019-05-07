@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UITableView{
+extension UITableView {
     
     func qs_registerCellNib<T:UITableViewCell>(_ aClass:T.Type){
         let name = String(describing: aClass)
