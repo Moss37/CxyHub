@@ -23,6 +23,18 @@
 		3D223F4822806B9F0078F1D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F4722806B9F0078F1D0 /* LoginViewController.swift */; };
 		3D223F4B22806BB10078F1D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F4A22806BB10078F1D0 /* WebViewController.swift */; };
 		3D223F5B22806C6D0078F1D0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F5A22806C6D0078F1D0 /* TabBarViewController.swift */; };
+		3D223F622281780D0078F1D0 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F602281780D0078F1D0 /* BaseResponse.swift */; };
+		3D223F632281780D0078F1D0 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F612281780D0078F1D0 /* BaseClient.swift */; };
+		3D223F6722817B940078F1D0 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6422817B940078F1D0 /* URLExtension.swift */; };
+		3D223F6822817B940078F1D0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6522817B940078F1D0 /* UIViewExtension.swift */; };
+		3D223F6922817B940078F1D0 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6622817B940078F1D0 /* DictionaryExtension.swift */; };
+		3D223F6B22817C5A0078F1D0 /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6A22817C5A0078F1D0 /* BaseApi.swift */; };
+		3D223F6D22817D6B0078F1D0 /* HotApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6C22817D6B0078F1D0 /* HotApi.swift */; };
+		3D223F6F22817D740078F1D0 /* HotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F6E22817D740078F1D0 /* HotClient.swift */; };
+		3D223F7122819CF00078F1D0 /* HotItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7022819CF00078F1D0 /* HotItem.swift */; };
+		3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */; };
+		3D223F7522819E660078F1D0 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7422819E660078F1D0 /* UITableViewExtension.swift */; };
+		3D223F7722819F340078F1D0 /* HotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7622819F340078F1D0 /* HotCell.swift */; };
 		9BDC5AC34BD3D8B4525753BE /* Pods_CxyHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE1F8C28CC48EECBFCE88FF /* Pods_CxyHub.framework */; };
 		EC685A1A628434E59C548553 /* Pods_CxyHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B136EFD1D26F643E7360BE43 /* Pods_CxyHubUITests.framework */; };
 		F0442D4BF4E68501537842FC /* Pods_CxyHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F643AB992C33FB9559A16637 /* Pods_CxyHubTests.framework */; };
@@ -75,10 +87,19 @@
 		3D223F5222806C010078F1D0 /* SystemUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		3D223F5322806C010078F1D0 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		3D223F5422806C010078F1D0 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
-		3D223F5622806C320078F1D0 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		3D223F5722806C320078F1D0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		3D223F5822806C320078F1D0 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		3D223F5A22806C6D0078F1D0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		3D223F602281780D0078F1D0 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		3D223F612281780D0078F1D0 /* BaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		3D223F6422817B940078F1D0 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		3D223F6522817B940078F1D0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3D223F6622817B940078F1D0 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		3D223F6A22817C5A0078F1D0 /* BaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
+		3D223F6C22817D6B0078F1D0 /* HotApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotApi.swift; sourceTree = "<group>"; };
+		3D223F6E22817D740078F1D0 /* HotClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotClient.swift; sourceTree = "<group>"; };
+		3D223F7022819CF00078F1D0 /* HotItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotItem.swift; sourceTree = "<group>"; };
+		3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		3D223F7422819E660078F1D0 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		3D223F7622819F340078F1D0 /* HotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCell.swift; sourceTree = "<group>"; };
 		3DBE24AC07EE82823788514C /* Pods-CxyHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.debug.xcconfig"; sourceTree = "<group>"; };
 		684FC79C9D8ADD685A1DA722 /* Pods-CxyHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.release.xcconfig"; sourceTree = "<group>"; };
 		80C262E817E838043A844E18 /* Pods-CxyHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHubUITests/Pods-CxyHubUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +243,11 @@
 		3D223F3322806AF30078F1D0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3D223F612281780D0078F1D0 /* BaseClient.swift */,
+				3D223F6A22817C5A0078F1D0 /* BaseApi.swift */,
+				3D223F602281780D0078F1D0 /* BaseResponse.swift */,
 				3D223F3922806B3D0078F1D0 /* BaseViewController.swift */,
+				3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -231,6 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				3D223F3B22806B560078F1D0 /* HotViewController.swift */,
+				3D223F7622819F340078F1D0 /* HotCell.swift */,
+				3D223F6C22817D6B0078F1D0 /* HotApi.swift */,
+				3D223F6E22817D740078F1D0 /* HotClient.swift */,
+				3D223F7022819CF00078F1D0 /* HotItem.swift */,
 			);
 			path = Hot;
 			sourceTree = "<group>";
@@ -301,9 +330,10 @@
 		3D223F5522806C1A0078F1D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3D223F5622806C320078F1D0 /* Dictionary+Extension.swift */,
-				3D223F5722806C320078F1D0 /* UIView+Extension.swift */,
-				3D223F5822806C320078F1D0 /* URL+Extension.swift */,
+				3D223F6622817B940078F1D0 /* DictionaryExtension.swift */,
+				3D223F6522817B940078F1D0 /* UIViewExtension.swift */,
+				3D223F6422817B940078F1D0 /* URLExtension.swift */,
+				3D223F7422819E660078F1D0 /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,17 +574,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D223F6822817B940078F1D0 /* UIViewExtension.swift in Sources */,
+				3D223F6B22817C5A0078F1D0 /* BaseApi.swift in Sources */,
 				3D223F4822806B9F0078F1D0 /* LoginViewController.swift in Sources */,
+				3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */,
+				3D223F6722817B940078F1D0 /* URLExtension.swift in Sources */,
+				3D223F7522819E660078F1D0 /* UITableViewExtension.swift in Sources */,
 				3D223F3C22806B560078F1D0 /* HotViewController.swift in Sources */,
 				3D223F5B22806C6D0078F1D0 /* TabBarViewController.swift in Sources */,
+				3D223F6F22817D740078F1D0 /* HotClient.swift in Sources */,
+				3D223F622281780D0078F1D0 /* BaseResponse.swift in Sources */,
 				3D223F4222806B6D0078F1D0 /* SearchViewController.swift in Sources */,
+				3D223F6922817B940078F1D0 /* DictionaryExtension.swift in Sources */,
 				3D223F4B22806BB10078F1D0 /* WebViewController.swift in Sources */,
+				3D223F632281780D0078F1D0 /* BaseClient.swift in Sources */,
 				3D223F0522805ECE0078F1D0 /* ViewController.swift in Sources */,
+				3D223F6D22817D6B0078F1D0 /* HotApi.swift in Sources */,
 				3D223F4522806B8B0078F1D0 /* MineViewController.swift in Sources */,
 				3D223F0322805ECE0078F1D0 /* AppDelegate.swift in Sources */,
 				3D223F3E22806B5E0078F1D0 /* NewsViewController.swift in Sources */,
 				3D223F4022806B650078F1D0 /* StarViewController.swift in Sources */,
+				3D223F7122819CF00078F1D0 /* HotItem.swift in Sources */,
 				3D223F3A22806B3D0078F1D0 /* BaseViewController.swift in Sources */,
+				3D223F7722819F340078F1D0 /* HotCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
