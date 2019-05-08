@@ -31,6 +31,18 @@ class DeviceInfo {
         return identifier
     }
     
+    static var isIPhoneX:Bool {
+        return UIScreen.instancesRespond(to: #selector(getter: RunLoop.currentMode)) ? CGSize(width: 1125, height: 2436).height <= (UIScreen.main.currentMode?.size.height)! : false
+    }
+    
+    static var navigationHeight:CGFloat {
+        return isIPhoneX ? 88:64
+    }
+    
+    static var tabbarHeight:CGFloat {
+        return isIPhoneX ? 83:49
+    }
+    
     class func deviceModel() -> String {
         return UIDevice.current.model
     }
