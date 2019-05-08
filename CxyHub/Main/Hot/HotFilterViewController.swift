@@ -10,12 +10,11 @@ import UIKit
 
 class HotFilterViewController: BaseTableViewController {
     
-    var segmentView:UISegmentedControl = UISegmentedControl(frame: .zero)
-    var searchBar:UISearchBar = UISearchBar(frame: .zero)
-    var client:HotClient = HotClient()
-    var items:[String] = []
-    var networkItems:[String] = []
-    var adapters:[String:HotFilterAdapter] = [:]
+    fileprivate var segmentView:UISegmentedControl = UISegmentedControl(frame: .zero)
+    fileprivate var searchBar:UISearchBar = UISearchBar(frame: .zero)
+    fileprivate var client:HotClient = HotClient()
+    fileprivate var items:[String] = []
+    fileprivate var adapters:[String:HotFilterAdapter] = [:]
     var selectedLang = "Swift"
 
     override func viewDidLoad() {
@@ -24,7 +23,6 @@ class HotFilterViewController: BaseTableViewController {
         weak var weakSelf = self
         client.fetchLang { (items) in
             weakSelf?.items = items ?? []
-            weakSelf?.networkItems = items ?? []
             weakSelf?.createAdapter()
             weakSelf?.tableView.reloadData()
         }
@@ -149,11 +147,11 @@ extension HotFilterViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let adapter = adapters["\(HotFilterConstants.normalSection)"] else { return }
         if searchText.count == 0 {
-            adapter.rows = networkItems
+            adapter.rows = items
             tableView.reloadData()
             return
         }
-        adapter.rows = networkItems.filter { (string) -> Bool in
+        adapter.rows = items.filter { (string) -> Bool in
             return string.contains(searchText)
         }
         tableView.reloadData()
