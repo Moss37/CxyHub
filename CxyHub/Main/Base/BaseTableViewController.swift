@@ -20,6 +20,7 @@ class BaseTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         let backItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(popAction))
         self.navigationItem.backBarButtonItem = backItem
+        hidesBottomBarWhenPushed = true
         register()
     }
     

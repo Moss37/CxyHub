@@ -19,6 +19,7 @@ class HotViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupSubviews()
         weak var weakSelf = self
         client.fetchTrending { (items) in
             if let hotItems = items {
@@ -27,6 +28,17 @@ class HotViewController: BaseTableViewController {
             }
         }
         cell = HotCell(style: .default, reuseIdentifier: "\(HotCell.self)")
+    }
+    
+    private func setupSubviews() {
+        let backItem = UIBarButtonItem(title: "筛选", style: .plain, target: self, action: #selector(filterAction))
+        self.navigationItem.rightBarButtonItem = backItem
+    }
+    
+    @objc
+    private func filterAction() {
+        let filterVC = HotFilterViewController()
+        navigationController?.pushViewController(filterVC, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

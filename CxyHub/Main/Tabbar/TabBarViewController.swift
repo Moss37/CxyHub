@@ -24,21 +24,26 @@ class TabBarViewController: UITabBarController {
         let mineItem = UITabBarItem(title: "Mine", image: UIImage(named: "bottom_tabbar_user_center_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "bottom_tabbar_user_center_selected")?.withRenderingMode(.alwaysOriginal))
         
         let homeVC = HotViewController()
-        homeVC.tabBarItem = homeItem
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        homeNav.tabBarItem = homeItem
         
         let channelVC = NewsViewController()
-        channelVC.tabBarItem = channelItem
+        let channelNav = UINavigationController(rootViewController: channelVC)
+        channelNav.tabBarItem = channelItem
         
         let dynamicVC = StarViewController()
-        dynamicVC.tabBarItem = dynamicItem
+        let dynamicNav = UINavigationController(rootViewController: dynamicVC)
+        dynamicNav.tabBarItem = dynamicItem
         
         let vipVC = SearchViewController()
-        vipVC.tabBarItem = vipItem
+        let vipNav = UINavigationController(rootViewController: vipVC)
+        vipNav.tabBarItem = vipItem
         
         let mineVC = MineViewController()
-        mineVC.tabBarItem = mineItem
+        let mineNav = UINavigationController(rootViewController: mineVC)
+        mineNav.tabBarItem = mineItem
         
-        viewControllers = [homeVC, channelVC, dynamicVC, vipVC, mineVC]
+        viewControllers = [homeNav, channelNav, dynamicNav, vipNav, mineNav]
         for (_, item) in tabBar.items!.enumerated() {
             let normalAttributes = [NSAttributedString.Key.foregroundColor:UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 1.0)]
             let selectedAttributes = [NSAttributedString.Key.foregroundColor:UIColor(red: 0.98, green: 0.45, blue: 0.60, alpha: 1.0)]

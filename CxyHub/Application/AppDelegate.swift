@@ -13,13 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarVC = TabBarViewController()
-        let nav = UINavigationController(rootViewController: tabBarVC)
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = nav
+        window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
         return true
     }

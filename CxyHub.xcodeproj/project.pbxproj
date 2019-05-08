@@ -35,6 +35,10 @@
 		3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */; };
 		3D223F7522819E660078F1D0 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7422819E660078F1D0 /* UITableViewExtension.swift */; };
 		3D223F7722819F340078F1D0 /* HotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7622819F340078F1D0 /* HotCell.swift */; };
+		3D223F7922828BD10078F1D0 /* HotTrendingLangApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7822828BD10078F1D0 /* HotTrendingLangApi.swift */; };
+		3D223F7B22828D0C0078F1D0 /* HotFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7A22828D0C0078F1D0 /* HotFilterViewController.swift */; };
+		3D223F7D228290E30078F1D0 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7C228290E30078F1D0 /* EnumExtension.swift */; };
+		3D223F7F2282D10C0078F1D0 /* UISearchBar+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */; };
 		9BDC5AC34BD3D8B4525753BE /* Pods_CxyHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE1F8C28CC48EECBFCE88FF /* Pods_CxyHub.framework */; };
 		EC685A1A628434E59C548553 /* Pods_CxyHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B136EFD1D26F643E7360BE43 /* Pods_CxyHubUITests.framework */; };
 		F0442D4BF4E68501537842FC /* Pods_CxyHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F643AB992C33FB9559A16637 /* Pods_CxyHubTests.framework */; };
@@ -100,6 +104,10 @@
 		3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		3D223F7422819E660078F1D0 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		3D223F7622819F340078F1D0 /* HotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCell.swift; sourceTree = "<group>"; };
+		3D223F7822828BD10078F1D0 /* HotTrendingLangApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotTrendingLangApi.swift; sourceTree = "<group>"; };
+		3D223F7A22828D0C0078F1D0 /* HotFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotFilterViewController.swift; sourceTree = "<group>"; };
+		3D223F7C228290E30078F1D0 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
+		3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Keyboard.swift"; sourceTree = "<group>"; };
 		3DBE24AC07EE82823788514C /* Pods-CxyHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.debug.xcconfig"; sourceTree = "<group>"; };
 		684FC79C9D8ADD685A1DA722 /* Pods-CxyHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.release.xcconfig"; sourceTree = "<group>"; };
 		80C262E817E838043A844E18 /* Pods-CxyHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHubUITests/Pods-CxyHubUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,10 +264,12 @@
 			isa = PBXGroup;
 			children = (
 				3D223F3B22806B560078F1D0 /* HotViewController.swift */,
+				3D223F7A22828D0C0078F1D0 /* HotFilterViewController.swift */,
 				3D223F7622819F340078F1D0 /* HotCell.swift */,
 				3D223F6C22817D6B0078F1D0 /* HotApi.swift */,
 				3D223F6E22817D740078F1D0 /* HotClient.swift */,
 				3D223F7022819CF00078F1D0 /* HotItem.swift */,
+				3D223F7822828BD10078F1D0 /* HotTrendingLangApi.swift */,
 			);
 			path = Hot;
 			sourceTree = "<group>";
@@ -334,6 +344,8 @@
 				3D223F6522817B940078F1D0 /* UIViewExtension.swift */,
 				3D223F6422817B940078F1D0 /* URLExtension.swift */,
 				3D223F7422819E660078F1D0 /* UITableViewExtension.swift */,
+				3D223F7C228290E30078F1D0 /* EnumExtension.swift */,
+				3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +595,7 @@
 				3D223F3C22806B560078F1D0 /* HotViewController.swift in Sources */,
 				3D223F5B22806C6D0078F1D0 /* TabBarViewController.swift in Sources */,
 				3D223F6F22817D740078F1D0 /* HotClient.swift in Sources */,
+				3D223F7F2282D10C0078F1D0 /* UISearchBar+Keyboard.swift in Sources */,
 				3D223F622281780D0078F1D0 /* BaseResponse.swift in Sources */,
 				3D223F4222806B6D0078F1D0 /* SearchViewController.swift in Sources */,
 				3D223F6922817B940078F1D0 /* DictionaryExtension.swift in Sources */,
@@ -592,9 +605,12 @@
 				3D223F6D22817D6B0078F1D0 /* HotApi.swift in Sources */,
 				3D223F4522806B8B0078F1D0 /* MineViewController.swift in Sources */,
 				3D223F0322805ECE0078F1D0 /* AppDelegate.swift in Sources */,
+				3D223F7D228290E30078F1D0 /* EnumExtension.swift in Sources */,
 				3D223F3E22806B5E0078F1D0 /* NewsViewController.swift in Sources */,
 				3D223F4022806B650078F1D0 /* StarViewController.swift in Sources */,
 				3D223F7122819CF00078F1D0 /* HotItem.swift in Sources */,
+				3D223F7922828BD10078F1D0 /* HotTrendingLangApi.swift in Sources */,
+				3D223F7B22828D0C0078F1D0 /* HotFilterViewController.swift in Sources */,
 				3D223F3A22806B3D0078F1D0 /* BaseViewController.swift in Sources */,
 				3D223F7722819F340078F1D0 /* HotCell.swift in Sources */,
 			);

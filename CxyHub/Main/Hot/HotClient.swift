@@ -18,7 +18,6 @@ class HotClient: BaseClient {
     }
     
     func fetchTrending(_ handler:BaseHandler<[HotItem]>?) {
-        lang = "Objective-C"
         request(api.baseURLString, method: api.method, parameters: api.parameters, encoding: api.encoding, headers: api.headers) { (response) in
             guard let responseObj = response else {
                 handler?(nil)
@@ -27,6 +26,23 @@ class HotClient: BaseClient {
             if responseObj.code == 0 {
                 if let recommend = [HotItem].deserialize(from: responseObj.items) as? [HotItem] {
                     handler?(recommend)
+                    return
+                }
+            }
+            handler?(nil)
+        }
+    }
+    
+    func fetchLang(_ handler:BaseHandler<[String]>?) {
+        let langApi = HotTrendingLangApi()
+        request(langApi.baseURLString, method: langApi.method, parameters: langApi.parameters, encoding: langApi.encoding, headers: langApi.headers) { (response) in
+            guard let responseObj = response else {
+                handler?(nil)
+                return
+            }
+            if responseObj.code == 0 {
+                if let langs = responseObj.items as? [String] {
+                    handler?(langs)
                     return
                 }
             }
