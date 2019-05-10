@@ -43,7 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let arr = url.absoluteString.components(separatedBy: "=")
+        if arr.count == 2 {
+            Login.shared.authCode = arr[1]
+        }
+        if url.absoluteString.count > 0 {
+            let noti = Notification(name: Notification.Name.init(AppConstants.loginSuccessNotificationName))
+            NotificationCenter.default.post(noti)
+        }
+        return true
+    }
 
 }
 

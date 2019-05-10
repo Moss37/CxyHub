@@ -38,6 +38,7 @@ class HotViewController: BaseTableViewController {
     @objc
     private func filterAction() {
         let filterVC = HotFilterViewController()
+        filterVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(filterVC, animated: true)
     }
     

@@ -39,6 +39,18 @@
 		3D223F7B22828D0C0078F1D0 /* HotFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7A22828D0C0078F1D0 /* HotFilterViewController.swift */; };
 		3D223F7D228290E30078F1D0 /* EnumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7C228290E30078F1D0 /* EnumExtension.swift */; };
 		3D223F7F2282D10C0078F1D0 /* UISearchBar+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */; };
+		3D27063E2285333B007BE64F /* UINavigationController+TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27063D2285333B007BE64F /* UINavigationController+TabBar.swift */; };
+		3D27064022853388007BE64F /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27063F22853388007BE64F /* BaseNavigationViewController.swift */; };
+		3D27064222854CF4007BE64F /* Array+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064122854CF4007BE64F /* Array+subscript.swift */; };
+		3D270644228569F0007BE64F /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D270643228569F0007BE64F /* LoginClient.swift */; };
+		3D27064622856A36007BE64F /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064522856A36007BE64F /* LoginApi.swift */; };
+		3D27064822856FA3007BE64F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064722856FA3007BE64F /* Login.swift */; };
+		3D27064A22859C36007BE64F /* LoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064922859C35007BE64F /* LoginAccess.swift */; };
+		3D27064C2285A718007BE64F /* MineProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064B2285A718007BE64F /* MineProfileCell.swift */; };
+		3D27064E2285AB78007BE64F /* MineNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064D2285AB78007BE64F /* MineNumbersCell.swift */; };
+		3D2706502285C541007BE64F /* MineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064F2285C541007BE64F /* MineApi.swift */; };
+		3D2706522285C630007BE64F /* MineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706512285C630007BE64F /* MineClient.swift */; };
+		3D2706542285C6C9007BE64F /* MineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706532285C6C9007BE64F /* MineUser.swift */; };
 		9BDC5AC34BD3D8B4525753BE /* Pods_CxyHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE1F8C28CC48EECBFCE88FF /* Pods_CxyHub.framework */; };
 		B2122A5122831E4700D80E30 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A4922831E4700D80E30 /* SystemUtils.swift */; };
 		B2122A5222831E4700D80E30 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A4A22831E4700D80E30 /* DeviceInfo.swift */; };
@@ -109,6 +121,18 @@
 		3D223F7A22828D0C0078F1D0 /* HotFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotFilterViewController.swift; sourceTree = "<group>"; };
 		3D223F7C228290E30078F1D0 /* EnumExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtension.swift; sourceTree = "<group>"; };
 		3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Keyboard.swift"; sourceTree = "<group>"; };
+		3D27063D2285333B007BE64F /* UINavigationController+TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TabBar.swift"; sourceTree = "<group>"; };
+		3D27063F22853388007BE64F /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		3D27064122854CF4007BE64F /* Array+subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+subscript.swift"; sourceTree = "<group>"; };
+		3D270643228569F0007BE64F /* LoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		3D27064522856A36007BE64F /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
+		3D27064722856FA3007BE64F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3D27064922859C35007BE64F /* LoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccess.swift; sourceTree = "<group>"; };
+		3D27064B2285A718007BE64F /* MineProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineProfileCell.swift; sourceTree = "<group>"; };
+		3D27064D2285AB78007BE64F /* MineNumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineNumbersCell.swift; sourceTree = "<group>"; };
+		3D27064F2285C541007BE64F /* MineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApi.swift; sourceTree = "<group>"; };
+		3D2706512285C630007BE64F /* MineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineClient.swift; sourceTree = "<group>"; };
+		3D2706532285C6C9007BE64F /* MineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUser.swift; sourceTree = "<group>"; };
 		3DBE24AC07EE82823788514C /* Pods-CxyHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.debug.xcconfig"; sourceTree = "<group>"; };
 		684FC79C9D8ADD685A1DA722 /* Pods-CxyHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.release.xcconfig"; sourceTree = "<group>"; };
 		80C262E817E838043A844E18 /* Pods-CxyHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHubUITests/Pods-CxyHubUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +290,7 @@
 				3D223F602281780D0078F1D0 /* BaseResponse.swift */,
 				3D223F3922806B3D0078F1D0 /* BaseViewController.swift */,
 				3D223F7222819E0A0078F1D0 /* BaseTableViewController.swift */,
+				3D27063F22853388007BE64F /* BaseNavigationViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -313,6 +338,11 @@
 			isa = PBXGroup;
 			children = (
 				3D223F4422806B8B0078F1D0 /* MineViewController.swift */,
+				3D27064B2285A718007BE64F /* MineProfileCell.swift */,
+				3D27064D2285AB78007BE64F /* MineNumbersCell.swift */,
+				3D27064F2285C541007BE64F /* MineApi.swift */,
+				3D2706512285C630007BE64F /* MineClient.swift */,
+				3D2706532285C6C9007BE64F /* MineUser.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -321,6 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				3D223F4722806B9F0078F1D0 /* LoginViewController.swift */,
+				3D270643228569F0007BE64F /* LoginClient.swift */,
+				3D27064522856A36007BE64F /* LoginApi.swift */,
+				3D27064922859C35007BE64F /* LoginAccess.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -344,6 +377,7 @@
 				B2122A4D22831E4700D80E30 /* Reachability.swift */,
 				B2122A4922831E4700D80E30 /* SystemUtils.swift */,
 				B2122A4B22831E4700D80E30 /* UserAgent.swift */,
+				3D27064722856FA3007BE64F /* Login.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -357,6 +391,8 @@
 				3D223F7422819E660078F1D0 /* UITableViewExtension.swift */,
 				3D223F7C228290E30078F1D0 /* EnumExtension.swift */,
 				3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */,
+				3D27063D2285333B007BE64F /* UINavigationController+TabBar.swift */,
+				3D27064122854CF4007BE64F /* Array+subscript.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,24 +634,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D223F6822817B940078F1D0 /* UIViewExtension.swift in Sources */,
+				3D2706542285C6C9007BE64F /* MineUser.swift in Sources */,
 				3D223F6B22817C5A0078F1D0 /* BaseApi.swift in Sources */,
+				3D27064E2285AB78007BE64F /* MineNumbersCell.swift in Sources */,
 				B2122A5122831E4700D80E30 /* SystemUtils.swift in Sources */,
 				3D223F4822806B9F0078F1D0 /* LoginViewController.swift in Sources */,
 				B2122A5322831E4700D80E30 /* UserAgent.swift in Sources */,
 				3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */,
 				3D223F6722817B940078F1D0 /* URLExtension.swift in Sources */,
 				3D223F7522819E660078F1D0 /* UITableViewExtension.swift in Sources */,
+				3D27064222854CF4007BE64F /* Array+subscript.swift in Sources */,
 				3D223F3C22806B560078F1D0 /* HotViewController.swift in Sources */,
 				B2122A5822831E4700D80E30 /* KeyboardHelper.swift in Sources */,
 				3D223F5B22806C6D0078F1D0 /* TabBarViewController.swift in Sources */,
 				3D223F6F22817D740078F1D0 /* HotClient.swift in Sources */,
 				3D223F7F2282D10C0078F1D0 /* UISearchBar+Keyboard.swift in Sources */,
 				3D223F622281780D0078F1D0 /* BaseResponse.swift in Sources */,
+				3D27063E2285333B007BE64F /* UINavigationController+TabBar.swift in Sources */,
 				B2122A5722831E4700D80E30 /* AppInfo.swift in Sources */,
 				3D223F4222806B6D0078F1D0 /* SearchViewController.swift in Sources */,
 				3D223F6922817B940078F1D0 /* DictionaryExtension.swift in Sources */,
 				3D223F4B22806BB10078F1D0 /* WebViewController.swift in Sources */,
 				3D223F632281780D0078F1D0 /* BaseClient.swift in Sources */,
+				3D27064A22859C36007BE64F /* LoginAccess.swift in Sources */,
+				3D27064822856FA3007BE64F /* Login.swift in Sources */,
 				3D223F0522805ECE0078F1D0 /* ViewController.swift in Sources */,
 				3D223F6D22817D6B0078F1D0 /* HotApi.swift in Sources */,
 				3D223F4522806B8B0078F1D0 /* MineViewController.swift in Sources */,
@@ -627,12 +669,18 @@
 				B2122A5622831E4700D80E30 /* AppConstants.swift in Sources */,
 				3D223F4022806B650078F1D0 /* StarViewController.swift in Sources */,
 				B2122A5A2283232700D80E30 /* HotFilterHeaderView.swift in Sources */,
+				3D27064C2285A718007BE64F /* MineProfileCell.swift in Sources */,
 				3D223F7122819CF00078F1D0 /* HotItem.swift in Sources */,
 				3D223F7922828BD10078F1D0 /* HotTrendingLangApi.swift in Sources */,
+				3D27064022853388007BE64F /* BaseNavigationViewController.swift in Sources */,
 				3D223F7B22828D0C0078F1D0 /* HotFilterViewController.swift in Sources */,
+				3D270644228569F0007BE64F /* LoginClient.swift in Sources */,
+				3D2706522285C630007BE64F /* MineClient.swift in Sources */,
 				3D223F3A22806B3D0078F1D0 /* BaseViewController.swift in Sources */,
 				B2122A5522831E4700D80E30 /* Reachability.swift in Sources */,
+				3D2706502285C541007BE64F /* MineApi.swift in Sources */,
 				3D223F7722819F340078F1D0 /* HotCell.swift in Sources */,
+				3D27064622856A36007BE64F /* LoginApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,7 +860,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L94HEL9RUT;
 				INFOPLIST_FILE = CxyHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -833,7 +881,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L94HEL9RUT;
 				INFOPLIST_FILE = CxyHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

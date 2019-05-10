@@ -8,12 +8,21 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
+    
+    var lastSelectedIndex:Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        delegate = self
 
         setupSubviews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
     private func setupSubviews() {
@@ -24,23 +33,23 @@ class TabBarViewController: UITabBarController {
         let mineItem = UITabBarItem(title: "Mine", image: UIImage(named: "bottom_tabbar_user_center_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "bottom_tabbar_user_center_selected")?.withRenderingMode(.alwaysOriginal))
         
         let homeVC = HotViewController()
-        let homeNav = UINavigationController(rootViewController: homeVC)
+        let homeNav = BaseNavigationViewController(rootViewController: homeVC)
         homeNav.tabBarItem = homeItem
         
         let channelVC = NewsViewController()
-        let channelNav = UINavigationController(rootViewController: channelVC)
+        let channelNav = BaseNavigationViewController(rootViewController: channelVC)
         channelNav.tabBarItem = channelItem
         
         let dynamicVC = StarViewController()
-        let dynamicNav = UINavigationController(rootViewController: dynamicVC)
+        let dynamicNav = BaseNavigationViewController(rootViewController: dynamicVC)
         dynamicNav.tabBarItem = dynamicItem
         
         let vipVC = SearchViewController()
-        let vipNav = UINavigationController(rootViewController: vipVC)
+        let vipNav = BaseNavigationViewController(rootViewController: vipVC)
         vipNav.tabBarItem = vipItem
         
         let mineVC = MineViewController()
-        let mineNav = UINavigationController(rootViewController: mineVC)
+        let mineNav = BaseNavigationViewController(rootViewController: mineVC)
         mineNav.tabBarItem = mineItem
         
         viewControllers = [homeNav, channelNav, dynamicNav, vipNav, mineNav]
@@ -49,6 +58,31 @@ class TabBarViewController: UITabBarController {
             let selectedAttributes = [NSAttributedString.Key.foregroundColor:UIColor(red: 0.98, green: 0.45, blue: 0.60, alpha: 1.0)]
             item.setTitleTextAttributes(normalAttributes, for: .normal)
             item.setTitleTextAttributes(selectedAttributes, for: .selected)
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard let baseNav = viewController as? BaseNavigationViewController else {
+            return
+        }
+        guard let baseVC = baseNav.topViewController as? BaseViewController else {
+            return
+        }
+        
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        lastSelectedIndex = selectedIndex
+        if let index = tabBar.items?.index(of: item) {
+            guard let navController = viewControllers?[index] as? BaseNavigationViewController else {
+                return
+            }
+            guard let viewController = navController.topViewController as? BaseViewController else {
+                return
+            }
+            if viewController.needsLogin {
+                
+            }
         }
     }
 }

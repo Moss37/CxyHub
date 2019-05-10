@@ -28,8 +28,10 @@ public struct AppConstants {
         return scheme
     }()
     
-    public static let appKey: String = "27eb53fc9058f8c3"
+    public static let clientId: String = "b3a4f6ff2baac32c1a10"
+    public static let clientSecret: String = "33ae7ba4b5c89bc679e255ddae27890030c80574"
+    public static let callbackUrl: String = "cxyhub://"
     
-    public static let appSecret: String = "c2ed53a74eeefe3cf99fbd01d8c9c375"
+    public static let loginSuccessNotificationName: String = "loginSuccessNotificationName"
 }
 

@@ -11,6 +11,8 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
     
+    var needsLogin:Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
@@ -20,13 +22,19 @@ class BaseTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         let backItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(popAction))
         self.navigationItem.backBarButtonItem = backItem
-        hidesBottomBarWhenPushed = true
         register()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if needsLogin && !Login.shared.isLogin && !Login.shared.hasLogin {
+            showLogin()
+        }
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -75,6 +83,18 @@ class BaseTableViewController: UITableViewController {
     
     func registerCellNibs() -> Array<AnyClass> {
         return []
+    }
+    
+    func showLogin() {
+        let loginVC = LoginViewController()
+        weak var weakSelf = self
+        loginVC.failureHandler = {
+            guard let tabVC = weakSelf?.tabBarController as? TabBarViewController else {
+                return
+            }
+            tabVC.selectedIndex = tabVC.lastSelectedIndex
+        }
+        present(loginVC, animated: true, completion: nil)
     }
     
     //MARK: - progress
