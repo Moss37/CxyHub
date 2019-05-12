@@ -16,13 +16,8 @@ enum HotSince: String {
 }
 
 class HotApi: BaseApi {
-    var lang:String = ""
-    var since:HotSince = .daily
-    init(_ lang:String = "", since:HotSince = .daily) {
-        super.init()
-        self.lang = lang
-        self.since = since
-    }
+    var lang:String = HotFilter.shared.lang
+    var since:HotSince = HotFilter.shared.since
     
     override var baseURLString: String {
         return "https://trendings.herokuapp.com".appending(path)

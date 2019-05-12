@@ -9,19 +9,13 @@
 import Foundation
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var needsLogin:Bool = false
+    var tableView:UITableView = UITableView(frame: .zero, style: .grouped)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.view.backgroundColor = UIColor.white
-        self.tableView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
-        navigationController?.navigationBar.tintColor = UIColor.red
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        let backItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: #selector(popAction))
-        self.navigationItem.backBarButtonItem = backItem
+        setupSubviews()
         register()
     }
     
@@ -37,6 +31,10 @@ class BaseTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillLayoutSubviews() {
+        tableView.frame = view.bounds
+    }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .default
     }
@@ -45,8 +43,12 @@ class BaseTableViewController: UITableViewController {
         return false
     }
     
-    @objc func popAction(){
-        self.navigationController?.popViewController(animated: true)
+    private func setupSubviews() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.sectionHeaderHeight = 0.01
+        tableView.sectionFooterHeight = 0.01
+        view.addSubview(tableView)
     }
     
     private func register(){
@@ -67,6 +69,7 @@ class BaseTableViewController: UITableViewController {
         for cls in footerClasses {
             self.tableView.qs_registerHeaderFooterClass(cls as! UITableViewHeaderFooterView.Type)
         }
+        self.tableView.qs_registerCellClass(UITableViewCell.self)
     }
     
     func registerHeaderViewClasses() -> Array<AnyClass> {
@@ -85,34 +88,21 @@ class BaseTableViewController: UITableViewController {
         return []
     }
     
-    func showLogin() {
-        let loginVC = LoginViewController()
-        weak var weakSelf = self
-        loginVC.failureHandler = {
-            guard let tabVC = weakSelf?.tabBarController as? TabBarViewController else {
-                return
-            }
-            tabVC.selectedIndex = tabVC.lastSelectedIndex
-        }
-        present(loginVC, animated: true, completion: nil)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    //MARK: - progress
-    func showProgress() {
-        self.view.addSubview(self.indicatorView)
-        self.view.bringSubviewToFront(self.indicatorView)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    func hideProgress() {
-        self.indicatorView.stopAnimating()
-        self.indicatorView.removeFromSuperview()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.qs_dequeueReusableCell(UITableViewCell.self)
+        return cell!
     }
     
-    lazy var indicatorView:UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .gray)
-        indicator.frame = CGRect(x: view.bounds.width/2 - 50 , y: view.bounds.height/2 - 50, width: 100, height: 100)
-        indicator.startAnimating()
-        return indicator
-    }()
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
 }
 

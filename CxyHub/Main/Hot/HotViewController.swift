@@ -20,6 +20,20 @@ class HotViewController: BaseTableViewController {
         super.viewDidLoad()
 
         setupSubviews()
+        cell = HotCell(style: .default, reuseIdentifier: "\(HotCell.self)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        request()
+    }
+    
+    private func setupSubviews() {
+        let backItem = UIBarButtonItem(title: "筛选", style: .plain, target: self, action: #selector(filterAction))
+        self.navigationItem.rightBarButtonItem = backItem
+    }
+    
+    private func request() {
         weak var weakSelf = self
         client.fetchTrending { (items) in
             if let hotItems = items {
@@ -27,12 +41,6 @@ class HotViewController: BaseTableViewController {
                 weakSelf?.tableView.reloadData()
             }
         }
-        cell = HotCell(style: .default, reuseIdentifier: "\(HotCell.self)")
-    }
-    
-    private func setupSubviews() {
-        let backItem = UIBarButtonItem(title: "筛选", style: .plain, target: self, action: #selector(filterAction))
-        self.navigationItem.rightBarButtonItem = backItem
     }
     
     @objc
@@ -53,12 +61,12 @@ class HotViewController: BaseTableViewController {
         return cell!
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let height = cell?.height(for: items[indexPath.row]) ?? 0
         return height
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 

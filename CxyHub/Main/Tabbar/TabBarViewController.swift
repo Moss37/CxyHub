@@ -65,7 +65,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         guard let baseNav = viewController as? BaseNavigationViewController else {
             return
         }
-        guard let baseVC = baseNav.topViewController as? BaseViewController else {
+        guard let _ = baseNav.topViewController as? BaseViewController else {
             return
         }
         

@@ -47,7 +47,7 @@
 		3D27064822856FA3007BE64F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064722856FA3007BE64F /* Login.swift */; };
 		3D27064A22859C36007BE64F /* LoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064922859C35007BE64F /* LoginAccess.swift */; };
 		3D27064C2285A718007BE64F /* MineProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064B2285A718007BE64F /* MineProfileCell.swift */; };
-		3D27064E2285AB78007BE64F /* MineNumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064D2285AB78007BE64F /* MineNumbersCell.swift */; };
+		3D27064E2285AB78007BE64F /* MineNumberItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064D2285AB78007BE64F /* MineNumberItem.swift */; };
 		3D2706502285C541007BE64F /* MineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064F2285C541007BE64F /* MineApi.swift */; };
 		3D2706522285C630007BE64F /* MineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706512285C630007BE64F /* MineClient.swift */; };
 		3D2706542285C6C9007BE64F /* MineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706532285C6C9007BE64F /* MineUser.swift */; };
@@ -61,6 +61,10 @@
 		B2122A5722831E4700D80E30 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A4F22831E4700D80E30 /* AppInfo.swift */; };
 		B2122A5822831E4700D80E30 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A5022831E4700D80E30 /* KeyboardHelper.swift */; };
 		B2122A5A2283232700D80E30 /* HotFilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A592283232700D80E30 /* HotFilterHeaderView.swift */; };
+		B22D78642286D1CF005DC870 /* HotFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22D78632286D1CE005DC870 /* HotFilter.swift */; };
+		B22D7866228821DB005DC870 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22D7865228821DB005DC870 /* String+Base64.swift */; };
+		B281AAE5228678DF00C2D58D /* MineOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B281AAE4228678DF00C2D58D /* MineOtherCell.swift */; };
+		B281AAE72286805900C2D58D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B281AAE62286805900C2D58D /* SettingViewController.swift */; };
 		EC685A1A628434E59C548553 /* Pods_CxyHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B136EFD1D26F643E7360BE43 /* Pods_CxyHubUITests.framework */; };
 		F0442D4BF4E68501537842FC /* Pods_CxyHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F643AB992C33FB9559A16637 /* Pods_CxyHubTests.framework */; };
 /* End PBXBuildFile section */
@@ -129,7 +133,7 @@
 		3D27064722856FA3007BE64F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3D27064922859C35007BE64F /* LoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccess.swift; sourceTree = "<group>"; };
 		3D27064B2285A718007BE64F /* MineProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineProfileCell.swift; sourceTree = "<group>"; };
-		3D27064D2285AB78007BE64F /* MineNumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineNumbersCell.swift; sourceTree = "<group>"; };
+		3D27064D2285AB78007BE64F /* MineNumberItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineNumberItem.swift; sourceTree = "<group>"; };
 		3D27064F2285C541007BE64F /* MineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApi.swift; sourceTree = "<group>"; };
 		3D2706512285C630007BE64F /* MineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineClient.swift; sourceTree = "<group>"; };
 		3D2706532285C6C9007BE64F /* MineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUser.swift; sourceTree = "<group>"; };
@@ -147,6 +151,11 @@
 		B2122A4F22831E4700D80E30 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		B2122A5022831E4700D80E30 /* KeyboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		B2122A592283232700D80E30 /* HotFilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotFilterHeaderView.swift; sourceTree = "<group>"; };
+		B22D78632286D1CE005DC870 /* HotFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotFilter.swift; sourceTree = "<group>"; };
+		B22D7865228821DB005DC870 /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		B22D7868228875A0005DC870 /* CxyHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CxyHub-Bridging-Header.h"; sourceTree = "<group>"; };
+		B281AAE4228678DF00C2D58D /* MineOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineOtherCell.swift; sourceTree = "<group>"; };
+		B281AAE62286805900C2D58D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BB15404A9DA2399EFA2C4FCC /* Pods-CxyHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHubTests/Pods-CxyHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBE1F8C28CC48EECBFCE88FF /* Pods_CxyHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CxyHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F643AB992C33FB9559A16637 /* Pods_CxyHubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CxyHubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +271,7 @@
 				3D223F0622805ECF0078F1D0 /* Main.storyboard */,
 				3D223F0922805ED00078F1D0 /* Assets.xcassets */,
 				3D223F0B22805ED00078F1D0 /* LaunchScreen.storyboard */,
+				B22D7868228875A0005DC870 /* CxyHub-Bridging-Header.h */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -338,8 +348,10 @@
 			isa = PBXGroup;
 			children = (
 				3D223F4422806B8B0078F1D0 /* MineViewController.swift */,
+				B281AAE62286805900C2D58D /* SettingViewController.swift */,
 				3D27064B2285A718007BE64F /* MineProfileCell.swift */,
-				3D27064D2285AB78007BE64F /* MineNumbersCell.swift */,
+				B281AAE4228678DF00C2D58D /* MineOtherCell.swift */,
+				3D27064D2285AB78007BE64F /* MineNumberItem.swift */,
 				3D27064F2285C541007BE64F /* MineApi.swift */,
 				3D2706512285C630007BE64F /* MineClient.swift */,
 				3D2706532285C6C9007BE64F /* MineUser.swift */,
@@ -378,6 +390,7 @@
 				B2122A4922831E4700D80E30 /* SystemUtils.swift */,
 				B2122A4B22831E4700D80E30 /* UserAgent.swift */,
 				3D27064722856FA3007BE64F /* Login.swift */,
+				B22D78632286D1CE005DC870 /* HotFilter.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -393,6 +406,7 @@
 				3D223F7E2282D10B0078F1D0 /* UISearchBar+Keyboard.swift */,
 				3D27063D2285333B007BE64F /* UINavigationController+TabBar.swift */,
 				3D27064122854CF4007BE64F /* Array+subscript.swift */,
+				B22D7865228821DB005DC870 /* String+Base64.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,6 +501,7 @@
 				TargetAttributes = {
 					3D223EFE22805ECE0078F1D0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1000;
 					};
 					3D223F1222805ED00078F1D0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -570,8 +585,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CxyHub/Pods-CxyHub-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AttributedMarkdown/AttributedMarkdown.framework",
+				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
+				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/GHMarkdownParser/GHMarkdownParser.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -580,6 +599,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AttributedMarkdown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GHMarkdownParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -587,7 +610,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CxyHub/Pods-CxyHub-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7CFC3FBABC0D9F405B265C9 /* [CP] Check Pods Manifest.lock */ = {
@@ -636,9 +659,11 @@
 				3D223F6822817B940078F1D0 /* UIViewExtension.swift in Sources */,
 				3D2706542285C6C9007BE64F /* MineUser.swift in Sources */,
 				3D223F6B22817C5A0078F1D0 /* BaseApi.swift in Sources */,
-				3D27064E2285AB78007BE64F /* MineNumbersCell.swift in Sources */,
+				B281AAE5228678DF00C2D58D /* MineOtherCell.swift in Sources */,
+				3D27064E2285AB78007BE64F /* MineNumberItem.swift in Sources */,
 				B2122A5122831E4700D80E30 /* SystemUtils.swift in Sources */,
 				3D223F4822806B9F0078F1D0 /* LoginViewController.swift in Sources */,
+				B22D78642286D1CF005DC870 /* HotFilter.swift in Sources */,
 				B2122A5322831E4700D80E30 /* UserAgent.swift in Sources */,
 				3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */,
 				3D223F6722817B940078F1D0 /* URLExtension.swift in Sources */,
@@ -667,6 +692,7 @@
 				3D223F3E22806B5E0078F1D0 /* NewsViewController.swift in Sources */,
 				B2122A5422831E4700D80E30 /* NotificationConstants.swift in Sources */,
 				B2122A5622831E4700D80E30 /* AppConstants.swift in Sources */,
+				B281AAE72286805900C2D58D /* SettingViewController.swift in Sources */,
 				3D223F4022806B650078F1D0 /* StarViewController.swift in Sources */,
 				B2122A5A2283232700D80E30 /* HotFilterHeaderView.swift in Sources */,
 				3D27064C2285A718007BE64F /* MineProfileCell.swift in Sources */,
@@ -679,6 +705,7 @@
 				3D223F3A22806B3D0078F1D0 /* BaseViewController.swift in Sources */,
 				B2122A5522831E4700D80E30 /* Reachability.swift in Sources */,
 				3D2706502285C541007BE64F /* MineApi.swift in Sources */,
+				B22D7866228821DB005DC870 /* String+Base64.swift in Sources */,
 				3D223F7722819F340078F1D0 /* HotCell.swift in Sources */,
 				3D27064622856A36007BE64F /* LoginApi.swift in Sources */,
 			);
@@ -857,6 +884,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L94HEL9RUT;
 				INFOPLIST_FILE = CxyHub/Info.plist;
@@ -867,6 +895,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cj.CxyHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CxyHub/Assets/CxyHub-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -878,6 +908,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L94HEL9RUT;
 				INFOPLIST_FILE = CxyHub/Info.plist;
@@ -888,6 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cj.CxyHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CxyHub/Assets/CxyHub-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -901,7 +933,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PF2S597TZW;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = CxyHubTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -923,7 +957,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PF2S597TZW;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = CxyHubTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -945,6 +981,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PF2S597TZW;
 				INFOPLIST_FILE = CxyHubUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -966,6 +1003,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PF2S597TZW;
 				INFOPLIST_FILE = CxyHubUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

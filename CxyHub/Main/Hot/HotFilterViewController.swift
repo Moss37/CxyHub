@@ -15,7 +15,7 @@ class HotFilterViewController: BaseTableViewController {
     fileprivate var client:HotClient = HotClient()
     fileprivate var items:[String] = []
     fileprivate var adapters:[String:HotFilterAdapter] = [:]
-    var selectedLang = "Swift"
+    var selectedLang = HotFilter.shared.lang
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,8 @@ class HotFilterViewController: BaseTableViewController {
         }
         
         segmentView.selectedSegmentIndex = 0
+        segmentView.addTarget(self, action: #selector(segmentAction), for: .valueChanged)
+        
         searchBar.placeholder = "Search"
         searchBar.searchBarStyle = .minimal
         searchBar.backgroundColor = UIColor.white
@@ -47,6 +49,11 @@ class HotFilterViewController: BaseTableViewController {
         searchBar.resignWhenKeyboardHides()
         
         navigationItem.titleView = segmentView
+    }
+    
+    @objc
+    private func segmentAction() {
+        
     }
     
     private func createAdapter() {
@@ -72,7 +79,7 @@ class HotFilterViewController: BaseTableViewController {
         adapters["\(normalAdapter.section)"] = normalAdapter
     }
     
-    private func updateCurrentAdapter(lang:String) {
+    func updateCurrentAdapter(lang:String) {
         guard let adapter = adapters["\(HotFilterConstants.currentSection)"] else { return }
         adapter.rows = [lang]
     }
@@ -99,7 +106,7 @@ class HotFilterViewController: BaseTableViewController {
         return adapter?.headerHeight ?? 0.01
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let adapter = adapters["\(section)"] else { return nil }
         if let headerView = adapter.headerView {
             return headerView
@@ -112,12 +119,13 @@ class HotFilterViewController: BaseTableViewController {
         return nil
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let adapter = adapters["\(indexPath.section)"] else { return }
         resignSearchBar()
         let lang = adapter.rows[indexPath.row]
         adapter.selectedLang = lang
         updateCurrentAdapter(lang: lang)
+        HotFilter.shared.lang = lang
         tableView.reloadData()
     }
     
@@ -157,7 +165,7 @@ extension HotFilterViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         resignSearchBar()
     }
 }

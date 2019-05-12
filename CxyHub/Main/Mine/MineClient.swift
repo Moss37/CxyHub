@@ -15,7 +15,7 @@ class MineClient: BaseClient {
         return MineApi(Login.shared.access.access_token)
     }
     
-    func fetch (_ handler:BaseHandler<MineUser>?) {
+    func fetchUser(_ handler:BaseHandler<MineUser>?) {
         getObj(api.baseURLString, parameters: api.parameters, encoding: URLEncoding.default, headers: api.headers) { (response) in
             if let obj = MineUser.deserialize(from: response) {
                 handler?(obj)

@@ -10,11 +10,8 @@ import Foundation
 
 class HotClient: BaseClient {
     
-    var since:HotSince = .daily
-    var lang:String = "Swift"
-    
     override var api: BaseApiProtocol {
-        return HotApi(lang, since: since)
+        return HotApi()
     }
     
     func fetchTrending(_ handler:BaseHandler<[HotItem]>?) {
