@@ -46,7 +46,7 @@ extension BaseClient {
         parameters:[String:Any]?,
         encoding:ParameterEncoding? = URLEncoding.default,
         headers:HTTPHeaders? = nil,
-        handler:BaseHandler<[String:Any]>?) {
+        handler:BaseHandler<Any>?) {
         requestObj(url, method: .get, parameters: parameters, encoding: encoding, headers: headers, handler: handler)
     }
     
@@ -55,7 +55,7 @@ extension BaseClient {
         parameters:[String:Any]?,
         encoding:ParameterEncoding? = URLEncoding.default,
         headers:HTTPHeaders? = nil,
-        handler:BaseHandler<[String:Any]>?) {
+        handler:BaseHandler<Any>?) {
         requestObj(url, method: .post, parameters: parameters, encoding: encoding, headers: headers, handler: handler)
     }
     
@@ -65,7 +65,7 @@ extension BaseClient {
         parameters:[String:Any]?,
         encoding:ParameterEncoding? = URLEncoding.default,
         headers:HTTPHeaders? = nil,
-        handler:BaseHandler<[String:Any]>?) {
+        handler:BaseHandler<Any>?) {
         var realHeaders:HTTPHeaders = defaultHeaders()
         if let header = headers {
             realHeaders.cxy_merge(header)
@@ -87,7 +87,11 @@ extension BaseClient {
                 }
                 do {
                     guard let obj = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String:Any] else {
-                        handler?(nil)
+                        guard let arr = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [Any] else {
+                            handler?(nil)
+                            return
+                        }
+                        handler?(arr)
                         return
                     }
                     handler?(obj)

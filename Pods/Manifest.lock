@@ -18,20 +18,28 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.13):
     - DTFoundation/Core
+  - EFCMark (0.0.2)
+  - EFMarkdown (5.0.0):
+    - EFCMark (= 0.0.2)
   - GHMarkdownParser (0.1.2)
   - HandyJSON (4.2.1)
   - Kingfisher (4.10.1)
-  - MJRefresh (3.1.16)
+  - MJRefresh (3.2.0)
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - AttributedMarkdown (from `https://github.com/dreamwieber/AttributedMarkdown.git`)
   - DTCoreText
+  - EFMarkdown
   - GHMarkdownParser
-  - HandyJSON
+  - HandyJSON (~> 4.2.1)
   - Kingfisher (~> 4.10.1)
   - MJRefresh
+  - SDWebImage
   - SnapKit
 
 SPEC REPOS:
@@ -39,10 +47,13 @@ SPEC REPOS:
     - Alamofire
     - DTCoreText
     - DTFoundation
+    - EFCMark
+    - EFMarkdown
     - GHMarkdownParser
     - HandyJSON
     - Kingfisher
     - MJRefresh
+    - SDWebImage
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -59,12 +70,15 @@ SPEC CHECKSUMS:
   AttributedMarkdown: ac5060667280be8cc8ee33a46c73e4ec6b17ca1a
   DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
+  EFCMark: 78fb32ed4107c8efc640ad9d20ac31cd44ce2046
+  EFMarkdown: 915ff03080b95efcc737650991397322d661f1d9
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
   HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 19fcb7f1cc3b974df498443d901d6a0946b26449
+PODFILE CHECKSUM: adca8e8ca626b92420b9dd39a7ed217519b1d5dc
 
 COCOAPODS: 1.6.1

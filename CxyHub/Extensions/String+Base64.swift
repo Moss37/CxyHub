@@ -29,4 +29,25 @@ extension String {
         }
         return ""
     }
+    
+    /// EZSE: Cut string from range
+    subscript(integerRange: Range<Int>) -> String {
+        let start = self.index(startIndex, offsetBy: integerRange.lowerBound)
+        let end = self.index(startIndex, offsetBy: integerRange.upperBound)
+        return String(self[start..<end])
+    }
+    
+    //获取子字符串
+    func substingInRange(_ r: Range<Int>) -> String? {
+        if r.lowerBound < 0 || r.upperBound > self.count {
+            return nil
+        }
+        let startIndex = self.index(self.startIndex, offsetBy:r.lowerBound)
+        let endIndex   = self.index(self.startIndex, offsetBy:r.upperBound)
+        return String(self[startIndex..<endIndex])
+    }
+    
+    var ocString:NSString {
+        return self as NSString
+    }
 }

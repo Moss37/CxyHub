@@ -51,6 +51,12 @@
 		3D2706502285C541007BE64F /* MineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27064F2285C541007BE64F /* MineApi.swift */; };
 		3D2706522285C630007BE64F /* MineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706512285C630007BE64F /* MineClient.swift */; };
 		3D2706542285C6C9007BE64F /* MineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2706532285C6C9007BE64F /* MineUser.swift */; };
+		3D27065A22894B6D007BE64F /* DTImageTextAttachment+CxyHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D27065922894B6D007BE64F /* DTImageTextAttachment+CxyHub.m */; };
+		3D27065D22898C89007BE64F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27065C22898C88007BE64F /* DetailViewController.swift */; };
+		3D27065F22898D25007BE64F /* DetailApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27065E22898D25007BE64F /* DetailApi.swift */; };
+		3D27066522899C6F007BE64F /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27066322899C6F007BE64F /* Detail.swift */; };
+		3D27066922899D19007BE64F /* DetailOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27066722899D18007BE64F /* DetailOwner.swift */; };
+		3D27066B22899E1A007BE64F /* DetailClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27066A22899E1A007BE64F /* DetailClient.swift */; };
 		9BDC5AC34BD3D8B4525753BE /* Pods_CxyHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE1F8C28CC48EECBFCE88FF /* Pods_CxyHub.framework */; };
 		B2122A5122831E4700D80E30 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A4922831E4700D80E30 /* SystemUtils.swift */; };
 		B2122A5222831E4700D80E30 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2122A4A22831E4700D80E30 /* DeviceInfo.swift */; };
@@ -137,6 +143,13 @@
 		3D27064F2285C541007BE64F /* MineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineApi.swift; sourceTree = "<group>"; };
 		3D2706512285C630007BE64F /* MineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineClient.swift; sourceTree = "<group>"; };
 		3D2706532285C6C9007BE64F /* MineUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineUser.swift; sourceTree = "<group>"; };
+		3D27065822894B6D007BE64F /* DTImageTextAttachment+CxyHub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTImageTextAttachment+CxyHub.h"; sourceTree = "<group>"; };
+		3D27065922894B6D007BE64F /* DTImageTextAttachment+CxyHub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DTImageTextAttachment+CxyHub.m"; sourceTree = "<group>"; };
+		3D27065C22898C88007BE64F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3D27065E22898D25007BE64F /* DetailApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApi.swift; sourceTree = "<group>"; };
+		3D27066322899C6F007BE64F /* Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		3D27066722899D18007BE64F /* DetailOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOwner.swift; sourceTree = "<group>"; };
+		3D27066A22899E1A007BE64F /* DetailClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailClient.swift; sourceTree = "<group>"; };
 		3DBE24AC07EE82823788514C /* Pods-CxyHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.debug.xcconfig"; sourceTree = "<group>"; };
 		684FC79C9D8ADD685A1DA722 /* Pods-CxyHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHub/Pods-CxyHub.release.xcconfig"; sourceTree = "<group>"; };
 		80C262E817E838043A844E18 /* Pods-CxyHubUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CxyHubUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CxyHubUITests/Pods-CxyHubUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +292,7 @@
 		3D223F3222806AE10078F1D0 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3D27065B22898C70007BE64F /* Detail */,
 				3D223F5922806C530078F1D0 /* Tabbar */,
 				3D223F4922806BA80078F1D0 /* Web */,
 				3D223F4622806B960078F1D0 /* Login */,
@@ -407,6 +421,8 @@
 				3D27063D2285333B007BE64F /* UINavigationController+TabBar.swift */,
 				3D27064122854CF4007BE64F /* Array+subscript.swift */,
 				B22D7865228821DB005DC870 /* String+Base64.swift */,
+				3D27065822894B6D007BE64F /* DTImageTextAttachment+CxyHub.h */,
+				3D27065922894B6D007BE64F /* DTImageTextAttachment+CxyHub.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,6 +433,18 @@
 				3D223F5A22806C6D0078F1D0 /* TabBarViewController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		3D27065B22898C70007BE64F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3D27066722899D18007BE64F /* DetailOwner.swift */,
+				3D27066322899C6F007BE64F /* Detail.swift */,
+				3D27065C22898C88007BE64F /* DetailViewController.swift */,
+				3D27065E22898D25007BE64F /* DetailApi.swift */,
+				3D27066A22899E1A007BE64F /* DetailClient.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		C1E29842A6ACF47C36467141 /* Frameworks */ = {
@@ -590,10 +618,13 @@
 				"${BUILT_PRODUCTS_DIR}/AttributedMarkdown/AttributedMarkdown.framework",
 				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
 				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/EFCMark/EFCMark.framework",
+				"${BUILT_PRODUCTS_DIR}/EFMarkdown/EFMarkdown.framework",
 				"${BUILT_PRODUCTS_DIR}/GHMarkdownParser/GHMarkdownParser.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -602,10 +633,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AttributedMarkdown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFCMark.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFMarkdown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GHMarkdownParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +692,7 @@
 			files = (
 				3D223F6822817B940078F1D0 /* UIViewExtension.swift in Sources */,
 				3D2706542285C6C9007BE64F /* MineUser.swift in Sources */,
+				3D27066922899D19007BE64F /* DetailOwner.swift in Sources */,
 				3D223F6B22817C5A0078F1D0 /* BaseApi.swift in Sources */,
 				B281AAE5228678DF00C2D58D /* MineOtherCell.swift in Sources */,
 				3D27064E2285AB78007BE64F /* MineNumberItem.swift in Sources */,
@@ -665,6 +700,7 @@
 				3D223F4822806B9F0078F1D0 /* LoginViewController.swift in Sources */,
 				B22D78642286D1CF005DC870 /* HotFilter.swift in Sources */,
 				B2122A5322831E4700D80E30 /* UserAgent.swift in Sources */,
+				3D27065D22898C89007BE64F /* DetailViewController.swift in Sources */,
 				3D223F7322819E0A0078F1D0 /* BaseTableViewController.swift in Sources */,
 				3D223F6722817B940078F1D0 /* URLExtension.swift in Sources */,
 				3D223F7522819E660078F1D0 /* UITableViewExtension.swift in Sources */,
@@ -691,6 +727,7 @@
 				3D223F7D228290E30078F1D0 /* EnumExtension.swift in Sources */,
 				3D223F3E22806B5E0078F1D0 /* NewsViewController.swift in Sources */,
 				B2122A5422831E4700D80E30 /* NotificationConstants.swift in Sources */,
+				3D27065F22898D25007BE64F /* DetailApi.swift in Sources */,
 				B2122A5622831E4700D80E30 /* AppConstants.swift in Sources */,
 				B281AAE72286805900C2D58D /* SettingViewController.swift in Sources */,
 				3D223F4022806B650078F1D0 /* StarViewController.swift in Sources */,
@@ -700,12 +737,15 @@
 				3D223F7922828BD10078F1D0 /* HotTrendingLangApi.swift in Sources */,
 				3D27064022853388007BE64F /* BaseNavigationViewController.swift in Sources */,
 				3D223F7B22828D0C0078F1D0 /* HotFilterViewController.swift in Sources */,
+				3D27066B22899E1A007BE64F /* DetailClient.swift in Sources */,
 				3D270644228569F0007BE64F /* LoginClient.swift in Sources */,
 				3D2706522285C630007BE64F /* MineClient.swift in Sources */,
 				3D223F3A22806B3D0078F1D0 /* BaseViewController.swift in Sources */,
+				3D27066522899C6F007BE64F /* Detail.swift in Sources */,
 				B2122A5522831E4700D80E30 /* Reachability.swift in Sources */,
 				3D2706502285C541007BE64F /* MineApi.swift in Sources */,
 				B22D7866228821DB005DC870 /* String+Base64.swift in Sources */,
+				3D27065A22894B6D007BE64F /* DTImageTextAttachment+CxyHub.m in Sources */,
 				3D223F7722819F340078F1D0 /* HotCell.swift in Sources */,
 				3D27064622856A36007BE64F /* LoginApi.swift in Sources */,
 			);

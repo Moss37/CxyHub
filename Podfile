@@ -9,10 +9,12 @@ pod 'Alamofire'
 pod 'SnapKit'
 pod 'Kingfisher', '~>4.10.1'
 pod 'MJRefresh'
-pod 'HandyJSON'
+pod 'HandyJSON', '~>4.2.1'
 pod 'AttributedMarkdown', :git => 'https://github.com/dreamwieber/AttributedMarkdown.git'
 pod 'DTCoreText'
 pod 'GHMarkdownParser'
+pod 'EFMarkdown'
+pod 'SDWebImage'
   # Pods for CxyHub
 
   target 'CxyHubTests' do

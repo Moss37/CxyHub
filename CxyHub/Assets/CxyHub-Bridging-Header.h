@@ -4,3 +4,4 @@
 
 #import "GHMarkdownParser.h"
 #import "DTCoreText.h"
+#import "DTImageTextAttachment+CxyHub.h"

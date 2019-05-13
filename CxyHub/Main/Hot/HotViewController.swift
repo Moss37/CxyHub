@@ -67,7 +67,8 @@ class HotViewController: BaseTableViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detailVC = DetailViewController()
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 
     override func registerCellClasses() -> Array<AnyClass> {
