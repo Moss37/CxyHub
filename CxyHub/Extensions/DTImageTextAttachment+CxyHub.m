@@ -11,7 +11,7 @@
 #import <DTFoundation/DTAnimatedGIF.h>
 #endif
 #import <DTFoundation/DTBase64Coding.h>
-#import <SDWebImage/SDWebImage.h>
+//#import <SDWebImage/SDWebImage.h>
 
 static NSCache *imageCache = nil;
 
@@ -156,10 +156,10 @@ static NSCache *imageCache = nil;
             dispatch_queue_t queue = dispatch_queue_create("gcd.queue", NULL);
             // add to sync queue, this url is not correct,you may need to get it from server
             dispatch_sync(queue, ^{
-                SDWebImageDownloader * downloader = [SDWebImageDownloader sharedDownloader];
-                [downloader downloadImageWithURL:contentURL completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
-                    NSLog(@"error:%@",error);
-                }];
+//                SDWebImageDownloader * downloader = [SDWebImageDownloader sharedDownloader];
+//                [downloader downloadImageWithURL:contentURL completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+//                    NSLog(@"error:%@",error);
+//                }];
             });
             
             NSData * imageData = [NSData dataWithContentsOfURL:contentURL];

@@ -21,7 +21,7 @@ class LoginClient: BaseClient {
     
     func fetchAccessToken(_ handler:BaseHandler<[String:String]>?) {
         postObj(accessApi.baseURLString, parameters: accessApi.parameters, encoding: URLEncoding.default, headers: accessApi.headers) { (response) in
-            if let responseObj = LoginAccess.deserialize(from: response) {
+            if let responseObj = LoginAccess.deserialize(from: response as? [String:Any]) {
                 Login.shared.access = responseObj
             } else {
                 // after request failed,should get authCode again

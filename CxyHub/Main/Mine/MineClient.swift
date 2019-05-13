@@ -17,7 +17,7 @@ class MineClient: BaseClient {
     
     func fetchUser(_ handler:BaseHandler<MineUser>?) {
         getObj(api.baseURLString, parameters: api.parameters, encoding: URLEncoding.default, headers: api.headers) { (response) in
-            if let obj = MineUser.deserialize(from: response) {
+            if let obj = MineUser.deserialize(from: response as? [String:Any]) {
                 handler?(obj)
             } else {
                 handler?(nil)

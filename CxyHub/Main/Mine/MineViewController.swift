@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AttributedMarkdown
+//import AttributedMarkdown
 import DTCoreText
 import EFMarkdown
 
@@ -24,7 +24,7 @@ class MineViewController: BaseTableViewController {
     private let client = MineClient()
     private var user:MineUser?
     private var adapters:[String:MineAdapter] = [:]
-    private var htmlParser:GHMarkdownParser = GHMarkdownParser()
+//    private var htmlParser:GHMarkdownParser = GHMarkdownParser()
     private var coreText:NSAttributedString?
     private var htmlLabel:DTAttributedTextView = DTAttributedTextView(frame: .zero)
     
@@ -102,7 +102,7 @@ class MineViewController: BaseTableViewController {
             var path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
             path.append("/REMDME.md")
             let text = try? String(contentsOfFile: path) ?? ""
-            let htmlStr = htmlParser.htmlString(fromMarkdownString: text)
+//            let htmlStr = htmlParser.htmlString(fromMarkdownString: text)
             let html = try? EFMarkdown().markdownToHTML(text ?? "", options: EFMarkdownOptions.safe)
 
             let data = html?.data(using: .utf8)
@@ -168,8 +168,8 @@ class MineViewController: BaseTableViewController {
         needsLogin = true
         navigationItem.title = "Profile"
         
-        htmlParser.options = kGHMarkdownAutoLink
-        htmlParser.githubFlavored = true
+//        htmlParser.options = kGHMarkdownAutoLink
+//        htmlParser.githubFlavored = true
         
         
     }
