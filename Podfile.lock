@@ -20,7 +20,7 @@ PODS:
   - EFCMark (0.0.2)
   - EFMarkdown (5.0.0):
     - EFCMark (= 0.0.2)
-  - HandyJSON (4.2.1)
+  - HandyJSON (5.0.1)
   - Kingfisher (4.10.1)
   - MJRefresh (3.2.0)
   - SnapKit (4.2.0)
@@ -29,8 +29,8 @@ DEPENDENCIES:
   - Alamofire
   - DTCoreText
   - EFMarkdown
-  - HandyJSON (~> 4.2.1)
-  - Kingfisher (~> 4.10.1)
+  - HandyJSON
+  - Kingfisher
   - MJRefresh
   - SnapKit
 
@@ -52,11 +52,11 @@ SPEC CHECKSUMS:
   DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   EFCMark: 78fb32ed4107c8efc640ad9d20ac31cd44ce2046
   EFMarkdown: 915ff03080b95efcc737650991397322d661f1d9
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
+  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: beed25808ce1ae8213908647204616492f462109
+PODFILE CHECKSUM: a4681aa763c8f724fc8659dad4ecafb81b648116
 
 COCOAPODS: 1.6.1
